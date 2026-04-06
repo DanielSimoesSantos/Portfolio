@@ -1,0 +1,16 @@
+!pip install transformers openai torch torchvision
+!pip install pydf
+!pip install fitz
+!pip install langchain_text_splitters
+!pip install -q pypdf
+!pip install pymupdf
+
+
+import re
+import json, os
+from typing import List, Dict
+from pypdf import PdfReader
+import pandas as pd
+import fitz
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
