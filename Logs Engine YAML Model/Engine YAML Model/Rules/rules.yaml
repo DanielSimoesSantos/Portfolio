@@ -1,0 +1,24 @@
+- rule_id: alerta_valores_altos
+  priority: 100
+  condition: "value>100"
+  actions:
+      - send_alert:
+        message: "Valor acima do limite permitido."
+      - log_event:
+        level: "WARNING"
+
+- rule_id: valor_zero
+  priority: 100
+  condition: "value==0"
+  actions:
+      - send_alert: "Valor é zero."
+
+
+- rule_id: alerta_valores_negativos
+  priority: 100
+  condition: "value<0"
+  actions:
+      - send_alert:
+          message: "Valor negativo não é permitido."
+      - log_event:
+          level: "WARNING"
